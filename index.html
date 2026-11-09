@@ -2,277 +2,707 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Distribución del Manatí | Colombia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <title>Conociendo el hábitat del manatí en Colombia</title>
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f3f7f2;
-    color: #203c32;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header {
-    background: #123e32;
-    color: white;
-    padding: 22px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f8f3;
+            color: #263b32;
+            line-height: 1.6;
+        }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 22px;
-    font-size: 14px;
-}
+        /* ENCABEZADO */
 
-.hero {
-    min-height: 520px;
-    padding: 75px 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    background: linear-gradient(120deg, #e0eee3, #f3f7f2);
-}
+        header {
+            background-color: #173f35;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-.hero-text {
-    max-width: 560px;
-}
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
 
-.etiqueta {
-    color: #39815b;
-    font-weight: bold;
-    font-size: 13px;
-    letter-spacing: 2px;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
 
-h1 {
-    font-size: clamp(38px, 5vw, 60px);
-    line-height: 1.1;
-    margin: 20px 0;
-    color: #164b38;
-}
+        nav a:hover {
+            color: #b7d9a8;
+        }
 
-.hero p {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #53675d;
-    margin-bottom: 30px;
-}
+        /* PORTADA PRINCIPAL */
 
-.boton {
-    display: inline-block;
-    padding: 15px 28px;
-    background: #1c704c;
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
+        .portada {
+            min-height: 570px;
+            background:
+                linear-gradient(
+                    rgba(12, 45, 37, 0.72),
+                    rgba(12, 45, 37, 0.72)
+                ),
+                url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1600")
+                center/cover no-repeat;
 
-.boton:hover {
-    background: #10452e;
-    transform: translateY(-3px);
-}
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 20px;
+            color: white;
+        }
 
-.imagen {
-    width: 43%;
-    max-width: 480px;
-    border-radius: 25px;
-    box-shadow: 0 12px 35px #234b3330;
-}
+        .contenido-portada {
+            max-width: 850px;
+        }
 
-.seccion {
-    padding: 65px 8%;
-    text-align: center;
-}
+        .etiqueta {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
 
-.seccion h2 {
-    font-size: 30px;
-    color: #164b38;
-    margin-bottom: 15px;
-}
+        .portada h1 {
+            font-size: 46px;
+            line-height: 1.2;
+            margin-bottom: 22px;
+        }
 
-.seccion > p {
-    color: #64746a;
-    line-height: 1.7;
-}
+        .portada p {
+            font-size: 18px;
+            max-width: 720px;
+            margin: 0 auto 30px;
+            color: #eef5ec;
+        }
 
-.tarjetas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 22px;
-    margin-top: 35px;
-}
+        .boton {
+            display: inline-block;
+            background-color: #a8cf83;
+            color: #173f35;
+            text-decoration: none;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.tarjeta {
-    background: white;
-    padding: 28px;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px #234b3310;
-    transition: 0.3s;
-}
+        .boton:hover {
+            background-color: white;
+            transform: translateY(-3px);
+        }
 
-.tarjeta:hover {
-    transform: translateY(-6px);
-}
+        /* SECCIONES GENERALES */
 
-.icono {
-    font-size: 35px;
-    margin-bottom: 15px;
-}
+        section {
+            padding: 70px 8%;
+        }
 
-.tarjeta h3 {
-    color: #246044;
-    margin-bottom: 12px;
-}
+        .titulo-seccion {
+            text-align: center;
+            color: #245747;
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
 
-.tarjeta p {
-    color: #64746a;
-    line-height: 1.6;
-    font-size: 14px;
-}
+        .subtitulo {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 40px;
+            color: #62746b;
+        }
 
-footer {
-    background: #123e32;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    font-size: 13px;
-}
+        /* PRESENTACIÓN DEL PROYECTO */
 
-@media(max-width: 750px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
+        .proyecto {
+            background-color: white;
+        }
 
-    nav a {
-        margin: 0 8px;
-    }
+        .proyecto-contenido {
+            max-width: 1050px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 55px 7%;
-    }
+        .proyecto-texto h3 {
+            color: #245747;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
 
-    .imagen {
-        width: 100%;
-    }
-}
-</style>
+        .proyecto-texto p {
+            margin-bottom: 15px;
+            color: #53655b;
+            text-align: justify;
+        }
+
+        .imagen {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+        }
+
+        /* IMPORTANCIA DEL MANATÍ */
+
+        .importancia {
+            background-color: #eaf2e5;
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .tarjeta {
+            background-color: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+        }
+
+        .icono {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .tarjeta h3 {
+            color: #245747;
+            margin-bottom: 12px;
+            font-size: 19px;
+        }
+
+        .tarjeta p {
+            color: #64746b;
+            font-size: 14px;
+        }
+
+        /* DISTRIBUCIÓN GEOGRÁFICA */
+
+        .distribucion {
+            background-color: white;
+        }
+
+        .distribucion-contenido {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .distribucion-contenido p {
+            color: #53655b;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* IDONEIDAD DEL HÁBITAT */
+
+        .idoneidad {
+            background-color: #eaf2e5;
+        }
+
+        .niveles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 35px auto 0;
+        }
+
+        .nivel {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .color-nivel {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+        }
+
+        .alto {
+            background-color: #238b45;
+        }
+
+        .medio {
+            background-color: #f1cf42;
+        }
+
+        .bajo {
+            background-color: #e87565;
+        }
+
+        .nivel h3 {
+            color: #245747;
+            margin-bottom: 8px;
+        }
+
+        .nivel p {
+            font-size: 14px;
+            color: #64746b;
+        }
+
+        /* EXPLORAR MAPA */
+
+        .explorar {
+            background-color: #173f35;
+            color: white;
+            text-align: center;
+        }
+
+        .explorar h2 {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .explorar p {
+            max-width: 720px;
+            margin: 0 auto 28px;
+            color: #e0ebe2;
+        }
+
+        .explorar .boton {
+            background-color: #a8cf83;
+        }
+
+        /* PIE DE PÁGINA */
+
+        footer {
+            background-color: #102f28;
+            color: #dce8df;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 13px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* DISEÑO PARA CELULARES */
+
+        @media (max-width: 768px) {
+
+            header {
+                justify-content: center;
+                text-align: center;
+                gap: 15px;
+            }
+
+            nav {
+                width: 100%;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .portada {
+                min-height: 500px;
+            }
+
+            .portada h1 {
+                font-size: 32px;
+            }
+
+            .portada p {
+                font-size: 16px;
+            }
+
+            .proyecto-contenido {
+                grid-template-columns: 1fr;
+            }
+
+            .tarjetas,
+            .niveles {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+
+            .titulo-seccion {
+                font-size: 25px;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">🌿 MANATÍ COLOMBIA</div>
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#proyecto">Proyecto</a>
-        <a href="#exploracion">Exploración</a>
-    </nav>
-</header>
+    <!-- ENCABEZADO -->
 
-<section class="hero" id="inicio">
+    <header>
 
-    <div class="hero-text">
-        <span class="etiqueta">BIODIVERSIDAD Y ANÁLISIS ESPACIAL</span>
+        <div class="logo">
+            Hábitat del Manatí
+        </div>
 
-        <h1>Conociendo el hábitat del manatí en Colombia</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#proyecto">Proyecto</a>
+            <a href="#importancia">Importancia</a>
+            <a href="#distribucion">Distribución</a>
+            <a href="mapa.html">Mapa</a>
+        </nav>
+
+    </header>
+
+
+    <!-- PORTADA PRINCIPAL -->
+
+    <main>
+
+        <section class="portada" id="inicio">
+
+            <div class="contenido-portada">
+
+                <span class="etiqueta">
+                    Biodiversidad · Conservación · Colombia
+                </span>
+
+                <h1>
+                    Conociendo el hábitat del manatí en Colombia
+                </h1>
+
+                <p>
+                    Una aproximación a la distribución geográfica y
+                    la idoneidad del hábitat del manatí, mediante el
+                    análisis de información espacial y ambiental.
+                </p>
+
+                <a href="mapa.html" class="boton">
+                    Explorar mapa
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRESENTACIÓN DEL PROYECTO -->
+
+        <section class="proyecto" id="proyecto">
+
+            <h2 class="titulo-seccion">
+                Sobre el proyecto
+            </h2>
+
+            <p class="subtitulo">
+                Conocer la distribución del manatí permite comprender
+                mejor sus requerimientos ambientales y las condiciones
+                de los ecosistemas donde habita.
+            </p>
+
+            <div class="proyecto-contenido">
+
+                <div class="proyecto-texto">
+
+                    <h3>
+                        El manatí y su entorno natural
+                    </h3>
+
+                    <p>
+                        El manatí es un mamífero acuático que habita
+                        ecosistemas como ríos, lagunas, ciénagas y
+                        zonas costeras. Estos ambientes le proporcionan
+                        alimento, refugio y condiciones necesarias
+                        para desarrollar sus actividades.
+                    </p>
+
+                    <p>
+                        En Colombia, la conservación de sus poblaciones
+                        está relacionada con la protección de los
+                        ecosistemas acuáticos, la disponibilidad de
+                        recursos y la calidad ambiental de los hábitats.
+                    </p>
+
+                    <p>
+                        Este proyecto busca representar espacialmente
+                        su distribución y explorar la idoneidad de
+                        diferentes áreas a partir de la información
+                        geográfica y ambiental disponible.
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <img
+                        class="imagen"
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Manatee%20swims%20underwater.jpg"
+                        alt="Manatí nadando en su hábitat natural"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- IMPORTANCIA ECOLÓGICA -->
+
+        <section class="importancia" id="importancia">
+
+            <h2 class="titulo-seccion">
+                ¿Por qué es importante estudiar al manatí?
+            </h2>
+
+            <p class="subtitulo">
+                Su conservación está vinculada con el equilibrio
+                ecológico y la protección de los ecosistemas acuáticos.
+            </p>
+
+            <div class="tarjetas">
+
+                <div class="tarjeta">
+
+                    <div class="icono">🌿</div>
+
+                    <h3>
+                        Equilibrio ecológico
+                    </h3>
+
+                    <p>
+                        El manatí forma parte de las dinámicas
+                        ecológicas de los ambientes acuáticos,
+                        donde utiliza la vegetación como fuente
+                        de alimentación.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">💧</div>
+
+                    <h3>
+                        Ecosistemas acuáticos
+                    </h3>
+
+                    <p>
+                        Depende de ambientes como ríos, ciénagas,
+                        lagunas y zonas costeras, por lo que su
+                        conservación se relaciona con la protección
+                        de estos ecosistemas.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">🌎</div>
+
+                    <h3>
+                        Conservación de especies
+                    </h3>
+
+                    <p>
+                        Identificar las áreas que presentan
+                        condiciones favorables permite aportar
+                        información para orientar acciones de
+                        conservación y manejo ambiental.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DISTRIBUCIÓN GEOGRÁFICA -->
+
+        <section class="distribucion" id="distribucion">
+
+            <h2 class="titulo-seccion">
+                Distribución geográfica
+            </h2>
+
+            <p class="subtitulo">
+                Una mirada espacial a las áreas donde se registra
+                la presencia del manatí en Colombia.
+            </p>
+
+            <div class="distribucion-contenido">
+
+                <p>
+                    La distribución del manatí en Colombia comprende
+                    diferentes ambientes acuáticos continentales
+                    y costeros. Su presencia está asociada a la
+                    disponibilidad de agua, alimento, refugio y
+                    conectividad entre los ecosistemas.
+                </p>
+
+                <p>
+                    La representación de los registros geográficos
+                    permite visualizar las zonas donde se ha
+                    documentado su presencia y facilita el análisis
+                    de su relación con las características del
+                    entorno.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- IDONEIDAD DEL HÁBITAT -->
+
+        <section class="idoneidad">
+
+            <h2 class="titulo-seccion">
+                Idoneidad del hábitat
+            </h2>
+
+            <p class="subtitulo">
+                La clasificación espacial permite diferenciar
+                las áreas según las condiciones de idoneidad
+                consideradas en el análisis.
+            </p>
+
+            <div class="niveles">
+
+                <div class="nivel">
+
+                    <div class="color-nivel alto"></div>
+
+                    <h3>
+                        Idoneidad alta
+                    </h3>
+
+                    <p>
+                        Áreas que presentan condiciones relativamente
+                        más favorables para el hábitat del manatí,
+                        de acuerdo con los criterios utilizados.
+                    </p>
+
+                </div>
+
+
+                <div class="nivel">
+
+                    <div class="color-nivel medio"></div>
+
+                    <h3>
+                        Idoneidad media
+                    </h3>
+
+                    <p>
+                        Áreas con condiciones intermedias de
+                        idoneidad, que pueden presentar algunas
+                        características favorables.
+                    </p>
+
+                </div>
+
+
+                <div class="nivel">
+
+                    <div class="color-nivel bajo"></div>
+
+                    <h3>
+                        Idoneidad baja
+                    </h3>
+
+                    <p>
+                        Áreas con condiciones menos favorables
+                        según las variables y los criterios
+                        considerados en el análisis.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPLORAR MAPA -->
+
+        <section class="explorar">
+
+            <h2>
+                Explora la distribución del manatí
+            </h2>
+
+            <p>
+                Consulta el mapa interactivo y visualiza los
+                registros de presencia y las áreas clasificadas
+                según su nivel de idoneidad del hábitat.
+            </p>
+
+            <a href="mapa.html" class="boton">
+                Explorar mapa interactivo
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
 
         <p>
-        Explora la distribución geográfica y la idoneidad
-        del hábitat de <i>Trichechus manatus</i> mediante
-        herramientas de análisis espacial y visualización
-        cartográfica.
+            Proyecto de análisis de la distribución e idoneidad
+            del hábitat del manatí en Colombia.
         </p>
 
-        <a class="boton" href="index.html">
-            Explorar mapa →
-        </a>
-    </div>
+        <p>
+            Ingeniería Ambiental · 2026
+        </p>
 
-    <img class="imagen"
-    src="https://images.unsplash.com/photo-1598755257130-c2aaca1f061c?w=1000"
-    alt="Manatí en su hábitat natural">
-
-</section>
-
-<section class="seccion" id="proyecto">
-
-    <h2>Sobre el proyecto</h2>
-
-    <p>
-    Esta plataforma permite explorar la distribución
-    del manatí y reconocer las áreas con diferentes
-    niveles de idoneidad de hábitat en Colombia.
-    </p>
-
-    <div class="tarjetas">
-
-        <div class="tarjeta">
-            <div class="icono">🗺️</div>
-            <h3>Distribución geográfica</h3>
-            <p>
-            Visualización espacial de los registros
-            de presencia de la especie.
-            </p>
-        </div>
-
-        <div class="tarjeta">
-            <div class="icono">🌱</div>
-            <h3>Idoneidad del hábitat</h3>
-            <p>
-            Identificación de zonas con diferentes
-            condiciones de idoneidad.
-            </p>
-        </div>
-
-        <div class="tarjeta">
-            <div class="icono">📊</div>
-            <h3>Análisis ambiental</h3>
-            <p>
-            Exploración de resultados y variables
-            relacionadas con la distribución.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<section class="seccion" id="exploracion">
-    <h2>Explora la distribución del manatí</h2>
-    <p>
-    Ingresa al mapa interactivo para consultar
-    la información espacial del proyecto.
-    </p>
-    <br>
-    <a class="boton" href="index.html">
-        Abrir mapa interactivo →
-    </a>
-</section>
-
-<footer>
-    Proyecto de distribución e idoneidad del hábitat del manatí en Colombia.
-</footer>
+    </footer>
 
 </body>
 </html>
+
