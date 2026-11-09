@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resultados | Distribución del manatí</title>
+
+<style>
+:root {
+  --verde: #245c43;
+  --verde2: #397b56;
+  --claro: #edf5ed;
+  --texto: #294337;
+  --fondo: #f8faf7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--verde);
+  color: white;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header h2 {
+  font-size: 21px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #c9e8ca;
+}
+
+.hero {
+  background: linear-gradient(120deg, #245c43, #528968);
+  color: white;
+  padding: 65px 8%;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 750px;
+  margin: auto;
+}
+
+.contenedor {
+  max-width: 1150px;
+  margin: auto;
+  padding: 45px 22px;
+}
+
+h2.seccion {
+  color: var(--verde);
+  margin-bottom: 12px;
+  font-size: 27px;
+}
+
+.descripcion {
+  color: #63766a;
+  margin-bottom: 25px;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+  margin: 30px 0;
+}
+
+.tarjeta {
+  background: white;
+  padding: 25px;
+  border-radius: 13px;
+  box-shadow: 0 3px 14px #0000000c;
+  border-top: 4px solid var(--verde2);
+}
+
+.tarjeta h3 {
+  font-size: 14px;
+  color: #718276;
+  margin-bottom: 10px;
+}
+
+.numero {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--verde);
+}
+
+.tarjeta p {
+  font-size: 13px;
+  color: #758279;
+}
+
+.panel {
+  background: white;
+  border-radius: 14px;
+  padding: 27px;
+  margin: 25px 0;
+  box-shadow: 0 3px 14px #0000000b;
+}
+
+.barra {
+  height: 17px;
+  border-radius: 20px;
+  background: #e9eee9;
+  overflow: hidden;
+  margin: 10px 0 22px;
+}
+
+.relleno {
+  height: 100%;
+  border-radius: 20px;
+}
+
+.alta { background: #25834c; width: 7.7%; }
+.media { background: #d6a23a; width: 23.7%; }
+.baja { background: #a6a6a6; width: 68.6%; }
+
+.dato {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #e7eee8;
+}
+
+th {
+  background: var(--claro);
+  color: var(--verde);
+}
+
+.nota {
+  background: #edf5ed;
+  padding: 18px;
+  border-left: 4px solid var(--verde2);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 13px 23px;
+  background: var(--verde);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+footer {
+  background: #204c38;
+  color: white;
+  padding: 28px;
+  text-align: center;
+  margin-top: 35px;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+  .hero h1 { font-size: 27px; }
+  header { justify-content: center; }
+  nav { justify-content: center; }
+  .numero { font-size: 27px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>🌿 Hábitat del Manatí</h2>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="mapa.html">Mapa</a>
+    <a href="resultados.html">Resultados</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Resultados del análisis</h1>
+  <p>
+    Exploración de la distribución e idoneidad del hábitat
+    del manatí antillano (Trichechus manatus) en Colombia,
+    mediante el procesamiento de registros de presencia
+    y variables ambientales.
+  </p>
+</section>
+
+<main class="contenedor">
+
+  <h2 class="seccion">01. Registros de presencia</h2>
+  <p class="descripcion">
+    Los registros fueron obtenidos de GBIF y sometidos
+    a procesos de limpieza y depuración antes de su
+    utilización en el modelamiento.
+  </p>
+
+  <section class="tarjetas">
+    <article class="tarjeta">
+      <h3>Registros descargados</h3>
+      <div class="numero">227</div>
+      <p>Registros iniciales de GBIF.</p>
+    </article>
+
+    <article class="tarjeta">
+      <h3>Registros depurados</h3>
+      <div class="numero">75</div>
+      <p>Después de los filtros de calidad.</p>
+    </article>
+
+    <article class="tarjeta">
+      <h3>Presencias del modelo</h3>
+      <div class="numero">53</div>
+      <p>Después del filtrado temporal y espacial.</p>
+    </article>
+  </section>
+
+  <section class="panel">
+    <h2 class="seccion">02. Distribución de registros</h2>
+    <p class="descripcion">
+      Distribución departamental de las 53 presencias
+      utilizadas en el modelo.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Departamento</th>
+          <th>Registros</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Córdoba</td><td>34</td></tr>
+        <tr><td>Bolívar</td><td>8</td></tr>
+        <tr><td>Antioquia</td><td>6</td></tr>
+        <tr><td>Santander</td><td>4</td></tr>
+        <tr><td>Chocó</td><td>1</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2 class="seccion">03. Superficie de idoneidad</h2>
+    <p class="descripcion">
+      Clasificación del índice de idoneidad del hábitat
+      obtenida mediante los umbrales recalculados con
+      validación espacial.
+    </p>
+
+    <div class="dato">
+      <strong>Superficie total modelada</strong>
+      <strong>47.909 km²</strong>
+    </div>
+
+    <br>
+
+    <div class="dato">
+      <strong>🟢 Idoneidad alta</strong>
+      <strong>3.673 km² (7,7 %)</strong>
+    </div>
+    <div class="barra">
+      <div class="relleno alta"></div>
+    </div>
+
+    <div class="dato">
+      <strong>🟡 Idoneidad media</strong>
+      <strong>11.377 km² (23,7 %)</strong>
+    </div>
+    <div class="barra">
+      <div class="relleno media"></div>
+    </div>
+
+    <div class="dato">
+      <strong>⚪ Idoneidad baja</strong>
+      <strong>32.859 km² (68,6 %)</strong>
+    </div>
+    <div class="barra">
+      <div class="relleno baja"></div>
+    </div>
+
+    <div class="nota">
+      <strong>Interpretación:</strong>
+      La categoría de idoneidad baja representa la mayor
+      proporción del área modelada, mientras que las zonas
+      de idoneidad alta representan el 7,7 %.
+      Estas categorías expresan la idoneidad estimada
+      por el modelo y no confirman por sí solas la
+      presencia actual del manatí.
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2 class="seccion">04. Variables del modelo</h2>
+    <p class="descripcion">
+      El modelo final de Random Forest utilizó cinco
+      variables ambientales:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Distancia al agua</td>
+          <td>Proximidad a superficies de agua.</td>
+        </tr>
+        <tr>
+          <td>Distancia a ríos</td>
+          <td>Proximidad a los principales sistemas fluviales.</td>
+        </tr>
+        <tr>
+          <td>Distancia a humedales</td>
+          <td>Proximidad a ecosistemas de humedal.</td>
+        </tr>
+        <tr>
+          <td>Distancia a manglares</td>
+          <td>Proximidad a coberturas de manglar.</td>
+        </tr>
+        <tr>
+          <td>Elevación</td>
+          <td>Altitud del terreno.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="panel">
+    <h2 class="seccion">05. Consideraciones del análisis</h2>
+    <p>
+      El procesamiento incluyó la descarga de registros
+      de GBIF, limpieza de coordenadas, reducción de
+      duplicados espaciales, preparación de variables
+      ambientales y aplicación de un modelo de
+      clasificación Random Forest.
+    </p>
+
+    <p style="margin-top:12px">
+      La clasificación final empleó umbrales derivados
+      de predicciones fuera de muestra mediante
+      validación espacial.
+    </p>
+
+    <div class="nota">
+      Los resultados corresponden al área de estudio
+      delimitada alrededor de los registros de presencia.
+      No deben interpretarse como una estimación de la
+      distribución de toda la especie en Colombia.
+    </div>
+  </section>
+
+  <center>
+    <a class="boton" href="mapa.html">
+      Explorar mapa interactivo →
+    </a>
+  </center>
+
+</main>
+
+<footer>
+  <p>Proyecto de distribución e idoneidad del hábitat del manatí en Colombia</p>
+  <p>Trichechus manatus | Conservación de ecosistemas acuáticos</p>
+</footer>
+
+</body>
+</html>
