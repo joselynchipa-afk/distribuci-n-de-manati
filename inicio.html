@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Distribución del Manatí | Colombia</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f7f2;
+    color: #203c32;
+}
+
+header {
+    background: #123e32;
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+.hero {
+    min-height: 520px;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(120deg, #e0eee3, #f3f7f2);
+}
+
+.hero-text {
+    max-width: 560px;
+}
+
+.etiqueta {
+    color: #39815b;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.1;
+    margin: 20px 0;
+    color: #164b38;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #53675d;
+    margin-bottom: 30px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 15px 28px;
+    background: #1c704c;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: #10452e;
+    transform: translateY(-3px);
+}
+
+.imagen {
+    width: 43%;
+    max-width: 480px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px #234b3330;
+}
+
+.seccion {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.seccion h2 {
+    font-size: 30px;
+    color: #164b38;
+    margin-bottom: 15px;
+}
+
+.seccion > p {
+    color: #64746a;
+    line-height: 1.7;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px #234b3310;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+}
+
+.icono {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: #246044;
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    color: #64746a;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+footer {
+    background: #123e32;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+}
+
+@media(max-width: 750px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .imagen {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🌿 MANATÍ COLOMBIA</div>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#proyecto">Proyecto</a>
+        <a href="#exploracion">Exploración</a>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+
+    <div class="hero-text">
+        <span class="etiqueta">BIODIVERSIDAD Y ANÁLISIS ESPACIAL</span>
+
+        <h1>Conociendo el hábitat del manatí en Colombia</h1>
+
+        <p>
+        Explora la distribución geográfica y la idoneidad
+        del hábitat de <i>Trichechus manatus</i> mediante
+        herramientas de análisis espacial y visualización
+        cartográfica.
+        </p>
+
+        <a class="boton" href="index.html">
+            Explorar mapa →
+        </a>
+    </div>
+
+    <img class="imagen"
+    src="https://images.unsplash.com/photo-1598755257130-c2aaca1f061c?w=1000"
+    alt="Manatí en su hábitat natural">
+
+</section>
+
+<section class="seccion" id="proyecto">
+
+    <h2>Sobre el proyecto</h2>
+
+    <p>
+    Esta plataforma permite explorar la distribución
+    del manatí y reconocer las áreas con diferentes
+    niveles de idoneidad de hábitat en Colombia.
+    </p>
+
+    <div class="tarjetas">
+
+        <div class="tarjeta">
+            <div class="icono">🗺️</div>
+            <h3>Distribución geográfica</h3>
+            <p>
+            Visualización espacial de los registros
+            de presencia de la especie.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <div class="icono">🌱</div>
+            <h3>Idoneidad del hábitat</h3>
+            <p>
+            Identificación de zonas con diferentes
+            condiciones de idoneidad.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <div class="icono">📊</div>
+            <h3>Análisis ambiental</h3>
+            <p>
+            Exploración de resultados y variables
+            relacionadas con la distribución.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="seccion" id="exploracion">
+    <h2>Explora la distribución del manatí</h2>
+    <p>
+    Ingresa al mapa interactivo para consultar
+    la información espacial del proyecto.
+    </p>
+    <br>
+    <a class="boton" href="index.html">
+        Abrir mapa interactivo →
+    </a>
+</section>
+
+<footer>
+    Proyecto de distribución e idoneidad del hábitat del manatí en Colombia.
+</footer>
+
+</body>
+</html>
